@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cff78e07eb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/myLogo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1><span>Joshua Mithamo</span><br>From Kenya</h1>
+            </div>
+        </div>
+
+    </div>
+    <!----------About-------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/josh2.jpg" alt="Joshua Mithamo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hello! I'm <strong>Joshua Mithamo</strong>, an enthusiastic and solution-driven Information
+                        Technology student at <strong>Dedan Kimathi University of Technology</strong>.
+                        I specialize in both front-end and back-end web development and have a growing interest in
+                        full-stack solutions, cloud-based systems, and intelligent applications.
+                        I’m passionate about building intuitive, secure, and impactful web platforms using technologies
+                        like React, Angular, Express.js, Node.js, PostgreSQL, and Django.
+                        <br><br>
+                        My work reflects a commitment to continuous learning, especially in areas like authentication,
+                        cloud integration, API development, Machine Learning and AI and data security.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full-Stack Web Development</span><br>HTML, CSS, JavaScript, TypeScript, React,
+                                Angular, Node.js, Express, Django (Basic)</li>
+                            <li><span>Programming Languages</span><br>Python, Java, C++, SQL</li>
+                            <li><span>Database Systems</span><br>PostgreSQL, MySQL, SQLite</li>
+                            <li><span>Tools & Platforms</span><br>Git, GitHub, XAMPP, VS Code, Postman, Thunder Client,
+                                Docker (beginner)</li>
+                            <li><span>Deployment & DevOps</span><br>GitHub Actions, Basic AWS Concepts</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>July 2025 - Present</span><br>Working on Techwave Electronic System – an
+                                e-commerce cloud-integrated web application</li>
+                            <li><span>March 2025 - July 2025</span><br>Working on the Christian Biodata Management
+                                System – a cloud-integrated web application for churches</li>
+                            <li><span>March 2024 - June 2024</span><br>Developed a Bookshop project using Angular and
+                                Express with advanced filtering and UI enhancements</li>
+                            <li><span>January 2024 - April 2024</span><br>Internal Attachment – Dedan Kimathi University
+                                of Technology (Web development projects)</li>
+                            <li><span>April 2022 - July 2022</span><br>ICT Certificate Study – foundational computer and
+                                networking skills</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - Present</span><br>Bachelor of Science in Information Technology<br>Dedan
+                                Kimathi University of Technology</li>
+                            <li><span>2016 - 2019</span><br>Nkubu High School</li>
+                            <li><span>2007 - 2015</span><br>Langata West Primary School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------services---------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Create interactive and eye-catching websites with my development expertise
+                    </p>
+                    <a href="#about">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Design</h2>
+                    <p>Excellent, unmatched quality in all aspects.
+                        Design and enginereed with perfection and craftsmanship in mind</p>
+                    <a href="#about">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-----------portfolio---------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/mywork2.jpeg">
+                    <div class="layer">
+                        <h3>Web Dev</h3>
+                        <p>Curative and creative web designs
+
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/mywork1.jpeg">
+                    <div class="layer">
+                        <h3>Hotel Booking</h3>
+                        <p>Book and Purchase products
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you through the talented people around the World.
+                            Download it from the playstore
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+
+    </div>
+
+    <!---------contact----------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>mithamojosh@gmail.com</p> <!--add send icon-->
+                    <p><i class="fa-solid fa-phone"></i>0791440321</p> <!--add phone icon-->
+                    <div class="social-icons">
+                        <a href="https://wa.me/2540791440321?text=Thank%20you%20for%20contacting%20Megalio%20Technologies.%20We%20provide%20solutions%20through%20innovation,%20creativity%20and%20technology.%20We%20value%20quality%2C%20efficiency%2C%20and%20ethics!%20Chat%20with%20us%20for%20more%20information%20and%20for%20business."
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100092542485771"><i
+                                class="fa-brands fa-facebook-f"></i></a> <!--add facebook icon-->
+                        <a href="https://x.com/jos80485"><i class="fa-brands fa-x-twitter"></i></a>
+                        <!--add twitter icon-->
+                        <a href="https://www.instagram.com/joshmith45768/"><i class="fa-brands fa-instagram"></i></a>
+                        <!--add instagram icon-->
+                        <a href="https://www.linkedin.com/in/joshua-mithamo-505591330/"><i
+                                class="fa-brands fa-linkedin-in"></i></a> <!--add linkedin icon-->
+                    </div>
+                    <a href="my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="https://formsubmit.co/mithamojosh@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New contact from portfolio">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <input type="hidden" name="_next" value="https://yourportfolio.com/thankyou.html">
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i> 2025 MEGALIO TECHNOLOGIES. ALL RIGHTS RESERVED</p>
+        </div>-
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
