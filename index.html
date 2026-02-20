@@ -4,16 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Joshua Mithamo — Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cff78e07eb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- Noise overlay -->
+    <div class="noise"></div>
+
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/myLogo.jpg" class="logo">
+                <div class="logo-wrap">
+                    <img src="images/myLogo.jpg" class="logo">
+                    <span class="logo-text">JM</span>
+                </div>
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -25,31 +33,50 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Software Developer</p>
-                <h1><span>Joshua Mithamo</span><br>From Kenya</h1>
+                <div class="tag-line"><span class="dot"></span>Available for opportunities</div>
+                <p class="role-label">Full-Stack Software Developer</p>
+                <h1><span class="name-highlight">Joshua</span><br><span class="name-highlight">Mithamo</span></h1>
+                <p class="sub-desc">Building production-grade systems for healthcare, fintech & social impact — from Nairobi, Kenya.</p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-ghost">Let's Talk</a>
+                </div>
+                <div class="tech-stack">
+                    <span>React</span><span>Angular</span><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span>
+                </div>
             </div>
         </div>
-
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
     </div>
+
     <!----------About-------->
     <div id="about">
         <div class="container">
+            <div class="section-label">// 01 — ABOUT</div>
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/josh2.jpg" alt="Joshua Mithamo">
+                    <div class="img-wrapper">
+                        <img src="images/josh2.jpg" alt="Joshua Mithamo">
+                        <div class="img-accent"></div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Production<br>Projects</span></div>
+                        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years<br>Coding</span></div>
+                        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Institutional<br>Clients</span></div>
+                    </div>
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>
-                        Hello! I'm <strong>Joshua Mithamo</strong>, an enthusiastic and solution-driven Information
-                        Technology student at <strong>Dedan Kimathi University of Technology</strong>.
-                        I specialize in both front-end and back-end web development and have a growing interest in
-                        full-stack solutions, cloud-based systems, and intelligent applications.
-                        I’m passionate about building intuitive, secure, and impactful web platforms using technologies
-                        like React, Angular, Express.js, Node.js, PostgreSQL, and Django.
+                    <p class="about-lead">
+                        I'm <strong>Joshua Mithamo</strong> — a Full-Stack Developer who builds systems that actually ship and serve real users.
+                    </p>
+                    <p class="about-body">
+                        Fresh BSc Information Technology graduate from <strong>Dedan Kimathi University of Technology</strong>, with hands-on experience delivering production-deployed platforms for institutional clients including the Archdiocese of Nyeri and DKUT Medical Center. I work across the full stack — from React & Angular frontends to Node.js APIs, PostgreSQL databases, and Linux VPS deployments.
                         <br><br>
-                        My work reflects a commitment to continuous learning, especially in areas like authentication,
-                        cloud integration, API development, Machine Learning and AI and data security.
+                        My work spans healthcare tech, fintech (M-PESA integrations), church management systems, and e-commerce — always focused on impact beyond the screen.
                     </p>
 
                     <div class="tab-titles">
@@ -60,37 +87,28 @@
 
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Full-Stack Web Development</span><br>HTML, CSS, JavaScript, TypeScript, React,
-                                Angular, Node.js, Express, Django (Basic)</li>
-                            <li><span>Programming Languages</span><br>Python, Java, C++, SQL</li>
-                            <li><span>Database Systems</span><br>PostgreSQL, MySQL, SQLite</li>
-                            <li><span>Tools & Platforms</span><br>Git, GitHub, XAMPP, VS Code, Postman, Thunder Client,
-                                Docker (beginner)</li>
-                            <li><span>Deployment & DevOps</span><br>GitHub Actions, Basic AWS Concepts</li>
+                            <li><span>Frontend</span><br>React, Angular 19, TypeScript, JavaScript, HTML5, CSS3</li>
+                            <li><span>Backend</span><br>Node.js, Express.js, Python (Flask, Django), REST APIs</li>
+                            <li><span>Databases</span><br>PostgreSQL, MySQL, MongoDB, SQLite</li>
+                            <li><span>DevOps & Tools</span><br>Git, GitHub Actions, PM2, Docker, Render, Vercel, VPS/Linux Server Admin</li>
+                            <li><span>Integrations</span><br>M-PESA Daraja API, ML microservices, RBAC systems, JWT Auth</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>July 2025 - Present</span><br>Working on Techwave Electronic System – an
-                                e-commerce cloud-integrated web application</li>
-                            <li><span>March 2025 - July 2025</span><br>Working on the Christian Biodata Management
-                                System – a cloud-integrated web application for churches</li>
-                            <li><span>March 2024 - June 2024</span><br>Developed a Bookshop project using Angular and
-                                Express with advanced filtering and UI enhancements</li>
-                            <li><span>January 2024 - April 2024</span><br>Internal Attachment – Dedan Kimathi University
-                                of Technology (Web development projects)</li>
-                            <li><span>April 2022 - July 2022</span><br>ICT Certificate Study – foundational computer and
-                                networking skills</li>
+                            <li><span>2024 – 2025</span><br>DigiHeal-Hub — AI-powered Healthcare Management System for DKUT Medical Center (React · TypeScript · PostgreSQL · Python Flask ML)</li>
+                            <li><span>2024</span><br>Christian Biodata Management System (CBMS) — Archdiocese of Nyeri (Angular 19 · Node.js · MySQL · RBAC)</li>
+                            <li><span>2024 – 2025</span><br>Techwave Electronics — Production e-commerce platform with M-PESA integration (techwaveelectronics.co.ke)</li>
+                            <li><span>2024</span><br>MathCode Academy — Educational platform for programming mathematics (React · TypeScript)</li>
+                            <li><span>Jan–Apr 2024</span><br>Internal Attachment — Dedan Kimathi University of Technology</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2020 - Present</span><br>Bachelor of Science in Information Technology<br>Dedan
-                                Kimathi University of Technology</li>
-                            <li><span>2016 - 2019</span><br>Nkubu High School</li>
-                            <li><span>2007 - 2015</span><br>Langata West Primary School</li>
+                            <li><span>2022 – 2025</span><br>Bachelor of Science in Information Technology<br>Dedan Kimathi University of Technology, Nyeri</li>
+                            <li><span>2018 – 2021</span><br>Kenya Certificate of Secondary Education (KCSE)</li>
                         </ul>
                     </div>
                 </div>
@@ -98,135 +116,178 @@
         </div>
     </div>
 
-    <!------------services---------->
+    <!------------Services---------->
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <div class="section-label">// 02 — SERVICES</div>
+            <h1 class="sub-title">What I Build</h1>
             <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>Create interactive and eye-catching websites with my development expertise
-                    </p>
-                    <a href="#about">Learn more</a>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h2>Full-Stack Web Apps</h2>
+                    <p>End-to-end web applications from database schema to polished UI. React, Angular, Node.js, and production deployment on VPS or cloud platforms.</p>
+                    <a href="#portfolio" class="service-link">See examples <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-
-                <div>
-                    <i class="fa-brands fa-android"></i>
-                    <h2>App Design</h2>
-                    <p>Excellent, unmatched quality in all aspects.
-                        Design and enginereed with perfection and craftsmanship in mind</p>
-                    <a href="#about">Learn more</a>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h2>Healthcare & Institutional Systems</h2>
+                    <p>Specialized management platforms for hospitals, churches, and institutions — with RBAC, audit trails, document generation, and secure data handling.</p>
+                    <a href="#portfolio" class="service-link">See examples <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h2>API Development & Integrations</h2>
+                    <p>RESTful APIs, third-party integrations (M-PESA Daraja, ML microservices), authentication systems, and backend architecture for scalable products.</p>
+                    <a href="#contact" class="service-link">Get in touch <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
-
     </div>
-    <!-----------portfolio---------->
+
+    <!-----------Portfolio---------->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <div class="section-label">// 03 — WORK</div>
+            <h1 class="sub-title">My Projects</h1>
             <div class="work-list">
-                <div class="work">
-                    <img src="images/mywork2.jpeg">
-                    <div class="layer">
-                        <h3>Web Dev</h3>
-                        <p>Curative and creative web designs
 
-                        </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
                 <div class="work">
-                    <img src="images/mywork1.jpeg">
-                    <div class="layer">
-                        <h3>Hotel Booking</h3>
-                        <p>Book and Purchase products
-                        </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <div class="work-img-wrap">
+                        <img src="images/mywork2.jpeg" alt="DigiHeal-Hub">
+                        <div class="work-tag">Healthcare · AI</div>
+                    </div>
+                    <div class="work-info">
+                        <h3>DigiHeal-Hub</h3>
+                        <p>AI-powered healthcare management system for DKUT Medical Center. React, TypeScript, Node.js, PostgreSQL + Python Flask ML service for consultation prediction.</p>
+                        <div class="work-tech"><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Python ML</span></div>
+                        <div class="work-links">
+                            <a href="https://github.com/joshmith" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
                     </div>
                 </div>
+
                 <div class="work">
-                    <img src="images/work-3.png">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you through the talented people around the World.
-                            Download it from the playstore
-                        </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <div class="work-img-wrap">
+                        <img src="images/mywork1.jpeg" alt="CBMS">
+                        <div class="work-tag">Institutional · Church</div>
+                    </div>
+                    <div class="work-info">
+                        <h3>CBMS — Archdiocese of Nyeri</h3>
+                        <p>Sacramental records management platform for the Archdiocese of Nyeri. Angular 19, Node.js/Express, MySQL with full RBAC, document generation, and audit trails.</p>
+                        <div class="work-tech"><span>Angular 19</span><span>Node.js</span><span>MySQL</span><span>RBAC</span></div>
+                        <div class="work-links">
+                            <a href="https://github.com/joshmith" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="work featured">
+                    <div class="work-img-wrap">
+                        <img src="images/work-3.png" alt="Techwave Electronics">
+                        <div class="work-tag live">Live · Fintech</div>
+                    </div>
+                    <div class="work-info">
+                        <h3>Techwave Electronics</h3>
+                        <p>Production e-commerce platform deployed to techwaveelectronics.co.ke with M-PESA Daraja API payment integration, Angular SSR, and VPS server management.</p>
+                        <div class="work-tech"><span>Angular</span><span>Node.js</span><span>M-PESA</span><span>VPS</span></div>
+                        <div class="work-links">
+                            <a href="https://techwaveelectronics.co.ke" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+                            <a href="https://github.com/joshmith" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <div class="work-img-wrap">
+                        <img src="images/mywork2.jpeg" alt="MathCode Academy">
+                        <div class="work-tag">EdTech</div>
+                    </div>
+                    <div class="work-info">
+                        <h3>MathCode Academy</h3>
+                        <p>Interactive educational platform for teaching programming mathematics. Features progress tracking, gamified achievements, and adaptive learning paths built with React and TypeScript.</p>
+                        <div class="work-tech"><span>React</span><span>TypeScript</span><span>Node.js</span></div>
+                        <div class="work-links">
+                            <a href="https://github.com/joshmith" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <a href="#" class="btn">See more</a>
+            <a href="https://github.com/joshmith" target="_blank" class="btn">View All on GitHub <i class="fa-brands fa-github"></i></a>
         </div>
-
     </div>
 
-    <!---------contact----------->
+    <!---------Contact----------->
     <div id="contact">
         <div class="container">
+            <div class="section-label">// 04 — CONTACT</div>
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i>mithamojosh@gmail.com</p> <!--add send icon-->
-                    <p><i class="fa-solid fa-phone"></i>0791440321</p> <!--add phone icon-->
+                    <h1 class="sub-title">Let's Work<br>Together</h1>
+                    <p class="contact-desc">Open to internship opportunities, freelance projects, and full-time roles. Based in Nairobi — available remotely.</p>
+                    <p class="contact-item"><i class="fa-solid fa-envelope"></i>joshuamithamo6@gmail.com</p>
+                    <p class="contact-item"><i class="fa-solid fa-phone"></i>+254 791 440 321</p>
+                    <p class="contact-item"><i class="fa-solid fa-location-dot"></i>Nairobi, Kenya</p>
                     <div class="social-icons">
-                        <a href="https://wa.me/2540791440321?text=Thank%20you%20for%20contacting%20Megalio%20Technologies.%20We%20provide%20solutions%20through%20innovation,%20creativity%20and%20technology.%20We%20value%20quality%2C%20efficiency%2C%20and%20ethics!%20Chat%20with%20us%20for%20more%20information%20and%20for%20business."
-                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100092542485771"><i
-                                class="fa-brands fa-facebook-f"></i></a> <!--add facebook icon-->
-                        <a href="https://x.com/jos80485"><i class="fa-brands fa-x-twitter"></i></a>
-                        <!--add twitter icon-->
-                        <a href="https://www.instagram.com/joshmith45768/"><i class="fa-brands fa-instagram"></i></a>
-                        <!--add instagram icon-->
-                        <a href="https://www.linkedin.com/in/joshua-mithamo-505591330/"><i
-                                class="fa-brands fa-linkedin-in"></i></a> <!--add linkedin icon-->
+                        <a href="https://wa.me/254791440321" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/joshua-mithamo-505591330/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/joshmith" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/jos80485" target="_blank" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/joshmith45768/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <a href="my-cv.pdf" download class="btn btn2">Download CV</a>
+                    <a href="Joshua_Mithamo_CV.docx" download="Joshua_Mithamo_Njeru_CV.docx" class="btn btn2">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
                 </div>
                 <div class="contact-right">
-                    <form action="https://formsubmit.co/mithamojosh@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/joshuamithamo6@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="New contact from portfolio">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="text" name="Subject" placeholder="Subject (e.g. Internship Inquiry)">
                         <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                        <input type="hidden" name="_next" value="https://yourportfolio.com/thankyou.html">
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <input type="hidden" name="_next" value="https://joshmith.github.io/Portfolio">
+                        <button type="submit" class="btn btn2"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
                     </form>
                     <span id="msg"></span>
                 </div>
             </div>
         </div>
         <div class="copyright">
-            <p><i class="fa-regular fa-copyright"></i> 2025 MEGALIO TECHNOLOGIES. ALL RIGHTS RESERVED</p>
-        </div>-
+            <p>Built by Joshua Mithamo &nbsp;·&nbsp; <i class="fa-regular fa-copyright"></i> 2025 &nbsp;·&nbsp; Nairobi, Kenya</p>
+        </div>
     </div>
 
     <script>
+        // Tab switching
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-
         function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
+            for (tablink of tablinks) tablink.classList.remove("active-link");
+            for (tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
 
+        // Mobile menu
         var sidemenu = document.getElementById("sidemenu");
+        function openmenu() { sidemenu.style.right = "0"; }
+        function closemenu() { sidemenu.style.right = "-200px"; }
 
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
+        // Animate elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.work, .service-card, .stat').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
     </script>
 
 </body>
-
 </html>
